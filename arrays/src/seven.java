@@ -1,6 +1,8 @@
 import java.util.*;
-class seven {
-	public static void main(String args[]){
+class seven 
+{
+	public static void main(String args[])
+	{
 		Scanner in=new Scanner(System.in);
 		char a;
 		int i;
@@ -9,15 +11,17 @@ class seven {
 		int sum=0;  //sum of all elements
 		int sum1;  //sum of alternate elements
 		int largest;
-		int max;
+		int max=array[0];
 		int smallest;
 		int count=0;  //count of even numbers
 		int count1=0;  //no. of same elements
 		int frequency=0;
-		do{
+		do
+		{
 			System.out.println("please enter the elements one by one :");
-			for(i=0;i<5;i++){
-				System.out.println("enter element "+(i++)+ ":");
+			for(i=0;i<5;i++)
+			{
+				System.out.println("enter element "+(i+1)+ ":");
 				array[i]=in.nextInt();
 			}
 			System.out.println("select anyone from the following options :");
@@ -29,13 +33,16 @@ class seven {
 			System.out.println("6 to sum alternate elements ");
 			System.out.println("7 to count even numbers ");
 			System.out.println("8 to see occurence and its frequency ");
-			System.out.println("Enter tour choice :");
-			switch(choice){
+			System.out.println("Enter your choice :");
+			choice = in.nextInt();
+			switch(choice)
+			{
 				case(1):{
+					System.out.println("array is :");
 					for(i=0;i<5;i++){
-						System.out.println("array is : "+array[i]);
+						System.out.println(array[i]);}
 						break;
-					}}
+					}
 					case(2):{
 						for(i=0;i<5;i++){
 							sum=sum+array[i];
@@ -54,9 +61,13 @@ class seven {
 							}
 							case(4):{
 								smallest=array[0];
-						for(i=0;i<5;i++){
-							if(array[i]<smallest){
-								largest=array[i];}}
+						for(i=0;i<5;i++)
+						{
+							if(array[i]<smallest)
+							{
+								smallest=array[i];
+							}
+						}
 								System.out.println("smallest element of the array is :");
 								System.out.println(smallest);
 								break;
@@ -65,7 +76,7 @@ class seven {
 								largest=array[0];
 					for(i=0;i<5;i++){
 							if(largest<array[i]){
-								largest=array[i];}}
+								max=array[i];}}
 					for(i=0;i<5;i++){
 							if(array[i]>max && array[i]<largest){
 								max=array[i];}}

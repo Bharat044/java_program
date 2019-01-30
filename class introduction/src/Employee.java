@@ -17,6 +17,6 @@ class Employee{
 		this.address=address;
 	}
 	void Display(){
-		System.out.println( (name) + "\t" + (yearJoining) "\t" + (address));
+		System.out.println(name+ "\t" +yearJoining+ "\t" +address);
 	}
 }
